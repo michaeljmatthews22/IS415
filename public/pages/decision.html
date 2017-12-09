@@ -1,0 +1,29 @@
+<div class="jumbotron text-center">
+	<h1>Decision Time</h1>
+</div>
+
+<div class="container">
+	<div class="row">
+
+		<div class="col-sm-3"></div>
+		<div class="col-sm-6">
+
+			<div ng-show="{{car.hasOffer}}">
+				{{message}}
+				<br>
+				Your car is worth: ${{car.est_value}}.00
+				<br>
+				They are offering you: ${{car.offerAmount}}.00
+
+			</div>
+			<div ng-hide="{{car.hasOffer}}">
+				{{message}}
+				<br>
+				Your car is worth: ${{car.est_value}}.00
+			</div>
+
+		<div class="col-sm-3"></div>
+		<br><br><br>
+
+	</div>
+</div>
