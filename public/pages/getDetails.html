@@ -12,12 +12,22 @@
 
 			<form ng-submit="carDetails()">
 				Miles: <input type="number" ng-model="miles">
-				<br>
-				Age:  <input type="number" ng-model="age">
-				<br>
-				Color: <input type="text" ng-model="color">
-				<br>
-				Make: <input type="number" ng-model="make">
+
+				<br> Age:
+
+				<select ng-model="selectedCar">
+					<option ng-repeat="x in age" value="{{x}}">{{x}}</option>
+				</select>
+
+				<br> Color:
+				<select ng-model="color">
+							<option ng-repeat="x in color" value="{{x}}">{{x}}</option>
+					</select>
+				<br> Make:
+				<select ng-model="make">
+			  <option ng-repeat="x in make" value="{{x}}">{{x}}</option>
+			 </select>
+
 				<br>
 				<br>
 				<input class="btn btn-primary" type="submit" value="Find My Car's Value!">
