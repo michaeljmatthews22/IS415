@@ -51,29 +51,6 @@
 
 	scotchApp.controller('getDetailsController', function($scope, $location, car, $http) {
 
-      //
-      //
-			// $(document).ready(function() {
-      //
-			// 	// Here is how to show an error message next to a form field
-      //
-			// 	var errorField = $('.form-input-name-row');
-      //
-			// 	// Adding the form-invalid-data class will show
-			// 	// the error message and the red x for that field
-      //
-			// 	errorField.addClass('form-invalid-data');
-			// 	errorField.find('.form-invalid-data-info').text('Please enter your name');
-      //
-      //
-			// 	// Here is how to mark a field with a green check mark
-      //
-			// 	var successField = $('.form-input-email-row');
-      //
-			// 	successField.addClass('form-valid-data');
-			// });
-
-
 	    $scope.car = car;
 
 	    $scope.age = ["1 year", "2 years", "3 years", "4 years", "5 years", "6 years",
@@ -106,10 +83,32 @@
 
 	    $scope.carDetails = function() {
 
-	        //hit API
-	        //hardcoding value
-	        $scope.car.est_value = 5000;
-	        $location.path("/decision");
+	        var car_data = {
+	            "make": $scope.car_make,
+	            "age": $scope.car_age,
+	            "color": $scope.car_color,
+	            "miles": $scope.car_miles
+	        };
+
+
+	        $http({
+	            method: 'POST',
+	            url: 'https://reqres.in/api/users',
+	            data: car_data,
+	            headers: {
+	                'Content-Type': 'application/x-www-form-urlencoded'
+	            }
+	        }).success(function(data){
+						console.log(data);
+
+						$scope.car.est_value = data.id;
+						$location.path("/decision");
+
+					});
+
+
+
+
 	    }
 
 	});
