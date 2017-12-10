@@ -51,6 +51,29 @@
 
 	scotchApp.controller('getDetailsController', function($scope, $location, car, $http) {
 
+      //
+      //
+			// $(document).ready(function() {
+      //
+			// 	// Here is how to show an error message next to a form field
+      //
+			// 	var errorField = $('.form-input-name-row');
+      //
+			// 	// Adding the form-invalid-data class will show
+			// 	// the error message and the red x for that field
+      //
+			// 	errorField.addClass('form-invalid-data');
+			// 	errorField.find('.form-invalid-data-info').text('Please enter your name');
+      //
+      //
+			// 	// Here is how to mark a field with a green check mark
+      //
+			// 	var successField = $('.form-input-email-row');
+      //
+			// 	successField.addClass('form-valid-data');
+			// });
+
+
 	    $scope.car = car;
 
 	    $scope.age = ["1 year", "2 years", "3 years", "4 years", "5 years", "6 years",
@@ -100,13 +123,13 @@
 
 	        if ($scope.car.net < 0) {
 	            $scope.car.to_sell = false;
-	            $scope.message = "Don't trade it in. They are offering you a lower amount than you deserve."
+	            $scope.message = "Don't sell."
 	        } else {
 	            $scope.car.to_sell = true;
-	            $scope.message = "Sell. They are offering you a greater amount than the car is worth."
+	            $scope.message = "Sell."
 	        }
 	    } else {
-	        $scope.message = "Here is some information that might be helpful for you when you go into decide."
+	        $scope.message = "See the results below!"
 	    }
 
 

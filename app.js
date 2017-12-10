@@ -1,5 +1,7 @@
 var express = require('express');
-const port = process.env.PORT;
+//const port = process.env.PORT;
+
+const port = 3000;
 var app = express();
 app.use(express.static(__dirname + '/public'));
 app.get('/', function (req, res) {
