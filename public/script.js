@@ -141,25 +141,43 @@
           //
 	        // });
 
+					// 'Auction': "Adesa",
+          //                   'BYRNO': "",
+          //                   'Color': "RED",
+          //                   'IsBadBuy': "",
+          //                   'Make': "MAZDA",
+          //                   'Size': "MEDIUM",
+          //                   'SubModel': "4D Sedan",
+          //                   'TopThreeAmericanName': "",
+          //                   'Trim': "",
+          //                   'VehicleAge': "3",
+          //                   'VehOdo': "60000",
+          //                   'VehYear': "",
+          //                   'VNST': "FL",
+          //                   'WarrantyCost': "",
+          //                   'WheelType': "Alloy",
+
+
+
 	        var cleaned_data = {
 	            "Inputs": {
 	                "input1": [{
 	                    "CarID": "",
-	                    "Auction": $scope.car_auction,
+	                    "Auction": "Adesa",
 	                    "BYRNO": "",
-	                    "Color": $scope.car_color,
+	                    "Color": "RED",
 	                    "IsBadBuy": "",
-	                    "Make": $scope.car_make,
-	                    "Size": $scope.car_size,
-	                    "SubModel": $scope.car_submodel,
+	                    "Make": "MAZDA",
+	                    "Size": "MEDIUM",
+	                    "SubModel": "4D Sedan",
 	                    "TopThreeAmericanName": "",
 	                    "Trim": "",
-	                    "VehicleAge": $scope.car_age,
-	                    "VehOdo": $scope.car_miles,
+	                    "VehicleAge": "3",
+	                    "VehOdo": "60000",
 	                    "VehYear": "",
-	                    "VNST": $scope.car_state,
+	                    "VNST": "FL",
 	                    "WarrantyCost": "",
-	                    "WheelType": $scope.car_wheel,
+	                    "WheelType": "Alloy",
 	                    "MMRCurrentAuctionAveragePrice": "",
 	                    "VehBCost": "",
 	                    "Net-MMR-EndPrice": "",
