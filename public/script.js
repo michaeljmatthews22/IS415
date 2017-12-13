@@ -118,28 +118,28 @@
 
 	    $scope.carDetails = function() {
 
-	        var car_data = {
-	            "make": $scope.car_make,
-	            "age": $scope.car_age,
-	            "color": $scope.car_color,
-	            "miles": $scope.car_miles
-	        };
-
-
-	        $http({
-	            method: 'POST',
-	            url: 'https://reqres.in/api/users',
-	            data: car_data,
-	            headers: {
-	                'Content-Type': 'application/x-www-form-urlencoded'
-	            }
-	        }).success(function(data){
-	        	console.log(data);
-
-	        	$scope.car.est_value = data.id;
-	        	$location.path("/decision");
-
-	        });
+	        // var car_data = {
+	        //     "make": $scope.car_make,
+	        //     "age": $scope.car_age,
+	        //     "color": $scope.car_color,
+	        //     "miles": $scope.car_miles
+	        // };
+          //
+          //
+	        // $http({
+	        //     method: 'POST',
+	        //     url: 'https://reqres.in/api/users',
+	        //     data: car_data,
+	        //     headers: {
+	        //         'Content-Type': 'application/x-www-form-urlencoded'
+	        //     }
+	        // }).success(function(data){
+	        // 	console.log(data);
+          //
+	        // 	$scope.car.est_value = data.id;
+	        // 	$location.path("/decision");
+          //
+	        // });
 
 	        var cleaned_data = {
 	            "Inputs": {
