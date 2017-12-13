@@ -205,8 +205,10 @@
 	                "cache-control": "no-cache"
 	            }
 	        }).success(function(res) {
-	            console.log(res);
-	            console.log("Success!");
+						var new_number = Math.round(res.Results.output1[0]['Scored Labels']*1)/1;
+						$scope.car.est_value = new_number;
+						$location.path("/decision");
+
 	        });
 
 
