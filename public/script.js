@@ -53,8 +53,9 @@
 
 	    $scope.car = car;
 
-	    $scope.age = ["1 year", "2 years", "3 years", "4 years", "5 years", "6 years",
-	        "7 years", "8 years", "9 years"
+
+	    $scope.age = ["1", "2", "3", "4", "5", "6",
+	        "7", "8", "9"
 	    ];
 	    $scope.make = ["ACURA", "BUICK", "CADILLAC", "CHEVORLET", "CHRYSLER", "DODGE", "FORD", "GMC", "HONDA", "HUMMER",
 	        "HYUNDAI", "INFINITI", "ISUZU", "JEEP", "KIA", "LEXUS", "LINCOLN", "MAZDA", "MERCURY", "MINI", "MITSUBISHI",
@@ -84,23 +85,24 @@
 	    ];
 
 	    $scope.size = [
-	        "Compact",
-	        "Crossover",
-	        "Large",
-	        "Large SUV",
-	        "Large Truck",
+	        "COMPACT",
+	        "CROSSOVER",
+	        "LARGE",
+	        "LARGE SUV",
+	        "LARGE Truck",
 	        "MEDIUM",
-	        "Medium SUV",
-	        "Small SUV",
-	        "Small Truck",
-	        "Specialty",
-	        "Sports",
-	        "Van"
+	        "MEDIUM SUV",
+	        "SMALL SUV",
+	        "SMALL Truck",
+	        "SPECIALTY",
+	        "SPORTS",
+	        "VAN"
 	    ];
 
 	    $scope.state = [
 	        "AL",
-	        "AR"
+	        "AR",
+					"FL"
 	    ];
 
 	    $scope.submodel = [
@@ -169,15 +171,15 @@
 	                    "IsBadBuy": "",
 	                    "Make": $scope.car_make,
 	                    "Size": $scope.car_size,
-	                    "SubModel": "4D Sedan",
+	                    "SubModel": $scope.car_submodel,
 	                    "TopThreeAmericanName": "",
 	                    "Trim": "",
-	                    "VehicleAge": "3",
-	                    "VehOdo": "60000",
+	                    "VehicleAge": $scope.car_age,
+	                    "VehOdo": $scope.car_miles.toString(),
 	                    "VehYear": "",
-	                    "VNST": "FL",
+	                    "VNST": $scope.car_state,
 	                    "WarrantyCost": "",
-	                    "WheelType": "Alloy",
+	                    "WheelType": $scope.car_wheel,
 	                    "MMRCurrentAuctionAveragePrice": "",
 	                    "VehBCost": "",
 	                    "Net-MMR-EndPrice": "",
