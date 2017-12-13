@@ -75,6 +75,41 @@
 	        "ORANGE", "PURPLE", "RED", "SILVER", "WHITE", "YELLOW", "NA", "OTHER"
 	    ];
 
+	    $scope.wheel = ["Alloy", "Covers", "Special", "Unknown"];
+
+	    $scope.auction = [
+	        "Adesa",
+	        "Manheim",
+	        "Other"
+	    ];
+
+	    $scope.size = [
+	        "Compact",
+	        "Crossover",
+	        "Large",
+	        "Large SUV",
+	        "Large Truck",
+	        "Medium",
+	        "Medium SUV",
+	        "Small SUV",
+	        "Small Truck",
+	        "Specialty",
+	        "Sports",
+	        "Van"
+	    ];
+
+	    $scope.state = [
+	        "AL",
+	        "AR"
+	    ];
+
+	    $scope.submodel = [
+	        "4D WAGON LW300",
+	        "4D WAGON LX",
+	        "4D WAGON OUTBACK",
+	        "4D WAGON OUTBACK SPORT"
+	    ];
+
 	    if ($scope.car.hasOffer) {
 	        $scope.message = "Looks like you have a good offer. Lets just make sure you're getting a good deal";
 	    } else {
@@ -83,28 +118,66 @@
 
 	    $scope.carDetails = function() {
 
-	        var car_data = {
-	            "make": $scope.car_make,
-	            "age": $scope.car_age,
-	            "color": $scope.car_color,
-	            "miles": $scope.car_miles
+	        // var car_data = {
+	        //     "make": $scope.car_make,
+	        //     "age": $scope.car_age,
+	        //     "color": $scope.car_color,
+	        //     "miles": $scope.car_miles
+	        // };
+	        //
+	        //
+	        // $http({
+	        //     method: 'POST',
+	        //     url: 'https://reqres.in/api/users',
+	        //     data: car_data,
+	        //     headers: {
+	        //         'Content-Type': 'application/x-www-form-urlencoded'
+	        //     }
+	        // }).success(function(data){
+	        // 	console.log(data);
+	        //
+	        // 	$scope.car.est_value = data.id;
+	        // 	$location.path("/decision");
+	        //
+	        // });
+
+	        var cleaned_data = {
+	            'CarID': "",
+	            'Auction': "Adesa",
+	            'BYRNO': "",
+	            'Color': "RED",
+	            'IsBadBuy': "",
+	            'Make': "MAZDA",
+	            'Size': "MEDIUM",
+	            'SubModel': "4D Sedan",
+	            'TopThreeAmericanName': "",
+	            'Trim': "",
+	            'VehicleAge': "3",
+	            'VehOdo': "60000",
+	            'VehYear': "",
+	            'VNST': "FL",
+	            'WarrantyCost': "",
+	            'WheelType': "Alloy",
 	        };
 
 
+
+	        var api_url = "https://ussouthcentral.services.azureml.net/workspaces/4a66ec34e5894d9ba6d646b2e8391701/services/8868eb84c2a54fd080abcfff6954534a/execute?api-version=2.0&format=swagger";
+
 	        $http({
 	            method: 'POST',
-	            url: 'https://reqres.in/api/users',
-	            data: car_data,
+	            url: api_url,
+	            data: cleaned_data,
 	            headers: {
-	                'Content-Type': 'application/x-www-form-urlencoded'
+	                "content-type" : "application/json",
+	                "authorization": "Bearer LITdefQ8FcjY3guuEF9jhJ+/8FFi1vjJAMEjXbR7gaW1gKoMENHGg10LL+ZaEE+iX73PhhpKMncKxB9TyPa5gg==",
+	                "cache-control": "no-cache",
+	                "postman-token": "84ee06bd-e3a8-dd8c-cd1a-683c1ebc6a92"
 	            }
-	        }).success(function(data){
-						console.log(data);
-
-						$scope.car.est_value = data.id;
-						$location.path("/decision");
-
-					});
+	        }).success(function(res) {
+	            console.log(res);
+							console.log("Success!");
+	        });
 
 
 
