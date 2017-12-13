@@ -142,22 +142,33 @@
 	        // });
 
 	        var cleaned_data = {
-	            'CarID': "",
-	            'Auction': "Adesa",
-	            'BYRNO': "",
-	            'Color': "RED",
-	            'IsBadBuy': "",
-	            'Make': "MAZDA",
-	            'Size': "MEDIUM",
-	            'SubModel': "4D Sedan",
-	            'TopThreeAmericanName': "",
-	            'Trim': "",
-	            'VehicleAge': "3",
-	            'VehOdo': "60000",
-	            'VehYear': "",
-	            'VNST': "FL",
-	            'WarrantyCost': "",
-	            'WheelType': "Alloy",
+	            "Inputs": {
+	                "input1": [{
+	                    "CarID": "",
+	                    "Auction": "Adesa",
+	                    "BYRNO": "",
+	                    "Color": "RED",
+	                    "IsBadBuy": "",
+	                    "Make": "MAZDA",
+	                    "Size": "MEDIUM",
+	                    "SubModel": "4D Sedan",
+	                    "TopThreeAmericanName": "",
+	                    "Trim": "",
+	                    "VehicleAge": 3,
+	                    "VehOdo": 60000,
+	                    "VehYear": "",
+	                    "VNST": "FL",
+	                    "WarrantyCost": "",
+	                    "WheelType": "Alloy",
+	                    "MMRCurrentAuctionAveragePrice": "",
+	                    "VehBCost": "",
+	                    "Net-MMR-EndPrice": "",
+	                    "PurchDate": ""
+	                }]
+	            },
+
+	            "GlobalParameters": {}
+
 	        };
 
 
@@ -169,14 +180,14 @@
 	            url: api_url,
 	            data: cleaned_data,
 	            headers: {
-	                "content-type" : "application/json",
+	                "content-type": "application/json",
 	                "authorization": "Bearer LITdefQ8FcjY3guuEF9jhJ+/8FFi1vjJAMEjXbR7gaW1gKoMENHGg10LL+ZaEE+iX73PhhpKMncKxB9TyPa5gg==",
 	                "cache-control": "no-cache",
 	                "postman-token": "84ee06bd-e3a8-dd8c-cd1a-683c1ebc6a92"
 	            }
 	        }).success(function(res) {
 	            console.log(res);
-							console.log("Success!");
+	            console.log("Success!");
 	        });
 
 
