@@ -920,16 +920,20 @@
 
 
 
-	        var api_url = "https://ussouthcentral.services.azureml.net/workspaces/4a66ec34e5894d9ba6d646b2e8391701/services/8868eb84c2a54fd080abcfff6954534a/execute?api-version=2.0&format=swagger";
+	        var api_url = "https://finalproject415api.azure-api.net/final/workspaces/4a66ec34e5894d9ba6d646b2e8391701/services/8868eb84c2a54fd080abcfff6954534a/execute?api-version=2.0&details=true&format=swagger";
 
 	        $http({
 	            method: 'POST',
 	            url: api_url,
 	            data: cleaned_data,
 	            headers: {
+									//"Host" :" finalproject415api.azure-api.net",
 	                "content-type": "application/json",
 	                "authorization": "Bearer LITdefQ8FcjY3guuEF9jhJ+/8FFi1vjJAMEjXbR7gaW1gKoMENHGg10LL+ZaEE+iX73PhhpKMncKxB9TyPa5gg==",
-	                "cache-control": "no-cache"
+	                "cache-control": "no-cache",
+									"Ocp-Apim-Trace": "true",
+									"Ocp-Apim-Subscription-Key": "fbfb73325307423abc0e770b0a3f7756",
+
 	            }
 	        }).success(function(res) {
 						var new_number = Math.round(res.Results.output1[0]['Scored Labels']*1)/1;
@@ -937,8 +941,6 @@
 						$location.path("/decision");
 
 	        });
-
-
 
 
 	    }
