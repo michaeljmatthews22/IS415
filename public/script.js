@@ -919,7 +919,6 @@
 	        };
 
 
-
 	        var api_url = "https://finalproject415api.azure-api.net/final/workspaces/4a66ec34e5894d9ba6d646b2e8391701/services/8868eb84c2a54fd080abcfff6954534a/execute?api-version=2.0&details=true&format=swagger";
 
 	        $http({
