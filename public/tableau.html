@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" />
     <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/font-awesome/4.0.0/css/font-awesome.css" />
 
+
     <!-- SPELLS -->
     <script src="https://public.tableau.com/javascripts/api/tableau-2.min.js"></script>
 
@@ -15,6 +16,7 @@
     <script src="tableau.js"></script>
 
     <link rel="stylesheet" href="css/form-validation.css">
+    <link rel="stylesheet" href="css/tableau.css" />
 
 </head>
 
@@ -35,33 +37,35 @@
         </div>
     </nav>
 
-    <div id="main">
+    <div class="container">
+        <div id="main">
 
-        <!-- main body -->
-        <!-- this is where the Tableau dashboard will be-->
-        <div id="vizContainer"></div>
-        <h3>Filter:</h3>
-        <input type="button" value="Filter" onclick="FilterSingleValue();"></input>
-        <input type="button" value="Filter by Texas" onclick="filterState();"></input>
-        <input type="button" value="Clear Filters" onclick="clearFilters();"></input>
-    </br></br>
-        <h3>Tabs:</h3>
-        <input type="button" value="Odometer" onclick="switchToTab1();"></input>
-        <input type="button" value="Size vs. Cost" onclick="switchToTab2();"></input>
-        <input type="button" value="Net Value vs. Vehicle Age" onclick="switchToTab3();"></input>
-        <input type="button" value="Wheel Type vs. Cost" onclick="switchToTab4();"></input>
-        <input type="button" value="Median Cost vs. Color" onclick="switchToTab5();"></input>
-        <input type="button" value="Net Cost vs. Color by State" onclick="switchToTab6();"></input>
-        <input type="button" value="Sales by Make in Each State" onclick="switchToTab7();"></input>
-    </br></br>
-        <h3>Select Specific Features:</h3>
-        <input type="button" value="Select NY Cars" onclick="selectNYCars();"></input>
+            <!-- main body -->
+            <!-- this is where the Tableau dashboard will be-->
+            <div id="vizContainer"></div>
+            <h3>Filter:</h3>
+            <input class="btn btn-primary" type="button" value="Filter" onclick="FilterSingleValue();"></input>
+            <input class="btn btn-primary" type="button" value="Filter by Texas" onclick="filterState();"></input>
+            <input class="btn btn-danger" type="button" value="Clear Filters" onclick="clearFilters();"></input>
+        </br></br>
+            <h3>Tabs:</h3>
+            <input class="btn btn-primary" type="button" value="Odometer" onclick="switchToTab1();"></input>
+            <input class="btn btn-primary" type="button" value="Size vs. Cost" onclick="switchToTab2();"></input>
+            <input class="btn btn-primary" type="button" value="Net Value vs. Vehicle Age" onclick="switchToTab3();"></input>
+            <input class="btn btn-primary" type="button" value="Wheel Type vs. Cost" onclick="switchToTab4();"></input>
+            <input class="btn btn-primary" type="button" value="Median Cost vs. Color" onclick="switchToTab5();"></input>
+            <input class="btn btn-primary" type="button" value="Net Cost vs. Color by State" onclick="switchToTab6();"></input>
+            <input class="btn btn-primary" type="button" value="Sales by Make in Each State" onclick="switchToTab7();"></input>
+        </br></br>
+            <h3>Select Specific Features:</h3>
+            <input class="btn btn-primary" type="button" value="Select NY Cars" onclick="selectNYCars();"></input>
 
 
+        </div>
     </div>
 
     <footer class="text-center">
-      <br><br><br><br>
+
     </footer>
 
 
