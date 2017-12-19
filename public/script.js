@@ -78,11 +78,11 @@
 
 	    $scope.wheel = ["Alloy", "Covers", "Special", "Unknown"];
 
-	    $scope.auction = [
-	        "Adesa",
-	        "Manheim",
-	        "Other"
-	    ];
+	    // $scope.auction = [
+	    //     "Adesa",
+	    //     "Manheim",
+	    //     "Other"
+	    // ];
 
 	    $scope.size = [
 	        "COMPACT",
@@ -892,7 +892,7 @@
 	            "Inputs": {
 	                "input1": [{
 	                    "CarID": "",
-	                    "Auction": $scope.car_auction,
+	                    "Auction": "",
 	                    "BYRNO": "",
 	                    "Color": $scope.car_color,
 	                    "IsBadBuy": "",

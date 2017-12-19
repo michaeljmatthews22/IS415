@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+
+<!-- define angular app -->
+<html ng-app="scotchApp">
+
+<head>
+    <!-- SCROLLS -->
+    <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/font-awesome/4.0.0/css/font-awesome.css" />
+    <link rel="stylesheet" href="tableau.css" />
+
+    <!-- SPELLS -->
+    <script src="https://public.tableau.com/javascripts/api/tableau-2.min.js"></script>
+
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="tableau-2.js"></script>
+
+    <link rel="stylesheet" href="css/form-validation.css">
+
+</head>
+
+<title>IS 415 Final Project </title>
+
+<!-- define angular controller -->
+
+<body onload="initViz();">
+
+    <nav class="navbar navbar-default">
+        <div class="container">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="/">Home</a>
+                <a class="navbar-brand" href="../">Tableau Data</a>
+            </div>
+
+
+        </div>
+    </nav>
+
+    <div class="container-span">
+        <div class="row">
+            <div class="col col-sm-1 col-md-2">
+                <img src="4runner.png" alt="Truck" id="sidebar-image">
+            </div>
+            <div class="text-center col col-sm-10 col-md-8">
+                <ul class="nav nav-tabs">
+                    <li><a data-toggle="tab" href="tableau-1.html">Discovery 1</a></li>
+                    <li class="active"><a data-toggle="tab" href="tableau-2.html">Discovery 2</a></li>
+                    <li><a data-toggle="tab" href="tableau-3.html">Discovery 3</a></li>
+                </ul>
+                <div id="main">
+
+                    <!-- main body -->
+                    <!-- this is where the Tableau dashboard will be-->
+                    <div id="vizContainer"></div>
+                </br></br>
+                </div>
+            </div>
+            <div class="col col-sm-1 col-md-2">
+                <img src="f150.png" alt="Truck" id="sidebar-image-right">
+                <img src="cruze.png" alt="Truck" id="sidebar-image-right-2">
+            </div>
+        </div>
+    </div>
+
+    <footer class="text-center">
+
+    </footer>
+
+
+</body>
+
+</html>
