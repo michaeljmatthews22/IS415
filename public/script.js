@@ -935,7 +935,7 @@
 
 	            }
 	        }).success(function(res) {
-						var new_number = Math.round(res.Results.output1[0]['Scored Labels']*1)/1;
+						var new_number = Math.round(res.Results.output1[0]['Scored Label Mean']*1)/1;
 						$scope.car.est_value = new_number;
 						$location.path("/decision");
 
