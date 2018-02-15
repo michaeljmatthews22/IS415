@@ -2,18 +2,18 @@ var workbook, activeSheet;
 
 function initViz() {
     var containerDiv = document.getElementById("vizContainer"),
-    //url = "https://YOUR-SERVER/views/YOUR-VISUALIZATION";
-    url = "https://public.tableau.com/views/Auction415/StoryThefive-year-oldCar?:embed=y&:display_count=yes&publish=yes";
+        //url = "https://YOUR-SERVER/views/YOUR-VISUALIZATION";
+        url = "https://public.tableau.com/views/Auction415/StoryThefive-year-oldCar?:embed=y&:display_count=yes&publish=yes";
     var options = {
-    width: containerDiv.offsetWidth,
-    height: containerDiv.offsetHeight,
-    hideTabs: false,
-    hideToolbar: true,
-    onFirstInteractive: function () {
-      workbook = viz.getWorkbook();
-      activeSheet = workbook.getActiveSheet();
-    }
-};
+        width: containerDiv.offsetWidth,
+        height: containerDiv.offsetHeight,
+        hideTabs: false,
+        hideToolbar: true,
+        onFirstInteractive: function() {
+            workbook = viz.getWorkbook();
+            activeSheet = workbook.getActiveSheet();
+        }
+    };
     var viz = new tableau.Viz(containerDiv, url, options);
 
 }
@@ -35,50 +35,50 @@ function filterState() {
 
 //Clear all Filters
 function clearFilters() {
-  activeSheet.clearFilterAsync("Wheel Type");
-  activeSheet.clearFilterAsync("Make");
-  activeSheet.clearFilterAsync("Size");
-  activeSheet.clearFilterAsync("Trim");
-  activeSheet.clearFilterAsync("Vnst");
-  activeSheet.clearFilterAsync("Color");
-  activeSheet.clearFilterAsync("Auction");
+    activeSheet.clearFilterAsync("Wheel Type");
+    activeSheet.clearFilterAsync("Make");
+    activeSheet.clearFilterAsync("Size");
+    activeSheet.clearFilterAsync("Trim");
+    activeSheet.clearFilterAsync("Vnst");
+    activeSheet.clearFilterAsync("Color");
+    activeSheet.clearFilterAsync("Auction");
 }
 
 //Switch to the Net vs. Odo tab
 function switchToTab1() {
-  workbook.activateSheetAsync("Net vs. Odo");
+    workbook.activateSheetAsync("Net vs. Odo");
 }
 
 function switchToTab2() {
-  workbook.activateSheetAsync("Size Cost MMR");
+    workbook.activateSheetAsync("Size Cost MMR");
 }
 
 function switchToTab3() {
-  workbook.activateSheetAsync("Net vs. Age");
+    workbook.activateSheetAsync("Net vs. Age");
 }
 
 function switchToTab4() {
-  workbook.activateSheetAsync("Wheel vs. Cost");
+    workbook.activateSheetAsync("Wheel vs. Cost");
 }
 
 function switchToTab5() {
-  workbook.activateSheetAsync("Median Cost vs. Color");
+    workbook.activateSheetAsync("Median Cost vs. Color");
 }
 
 function switchToTab6() {
-  workbook.activateSheetAsync("Net vs State vs Color");
+    workbook.activateSheetAsync("Net vs State vs Color");
 }
 
 function switchToTab7() {
-  workbook.activateSheetAsync("Sales by Make in Each State");
+    workbook.activateSheetAsync("Sales by Make in Each State");
 }
 
 function switchToStory1() {
-  workbook.activateSheetAsync("Story 1");
+    workbook.activateSheetAsync("Story 1");
 }
 
 function switchToStory2() {
-  workbook.activateSheetAsync("Story 2");
+    workbook.activateSheetAsync("Story 2");
 }
 
 // function selectNYCars() {

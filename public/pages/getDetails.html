@@ -1,100 +1,100 @@
 <div class="container">
-   <h2>Step 2 of 3</h2>
-   <div class="progress">
-      <div class="progress-bar" role="progressbar" aria-valuenow="66" aria-valuemin="0" aria-valuemax="100" style="width:50%">
-         <span class="sr-only">Step 2 of 3</span>
-      </div>
-   </div>
+    <h2>Step 2 of 3</h2>
+    <div class="progress">
+        <div class="progress-bar" role="progressbar" aria-valuenow="66" aria-valuemin="0" aria-valuemax="100" style="width:50%">
+            <span class="sr-only">Step 2 of 3</span>
+        </div>
+    </div>
 </div>
 <div class="container">
-   <div class="row">
-      <div class="col-sm-3"></div>
-      <div class="col-sm-6">
-         <div class="main-content">
-            <!-- You only need this form and the form-validation.css -->
-            <form class="form-validation" ng-submit="carDetails()">
-               <div class="form-title-row">
-                  <h1>Car Details</h1>
-               </div>
-               <div class="form-row">
-                  <label>
+    <div class="row">
+        <div class="col-sm-3"></div>
+        <div class="col-sm-6">
+            <div class="main-content">
+                <!-- You only need this form and the form-validation.css -->
+                <form class="form-validation" ng-submit="carDetails()">
+                    <div class="form-title-row">
+                        <h1>Car Details</h1>
+                    </div>
+                    <div class="form-row">
+                        <label>
                   <span>Miles</span>
                   <input required="required" type="number" ng-model="car_miles">
                   </label>
-               </div>
-               <div class="form-row">
-                  <label>
+                    </div>
+                    <div class="form-row">
+                        <label>
                      <span>Age</span>
                      <select required="required" ng-model="car_age" >
                         <option value="">----Select------</option>
                         <option ng-repeat="x in age" value="{{x}}">{{x}}</option>
                      </select>
                   </label>
-               </div>
-               <div class="form-row">
-                  <label>
+                    </div>
+                    <div class="form-row">
+                        <label>
                      <span>Make</span>
                      <select required="required" ng-model="car_make">
                         <option value="">----Select------</option>
                         <option ng-repeat="y in make" value="{{y}}">{{y}}</option>
                      </select>
                   </label>
-               </div>
-                  <div class="form-row">
-                     <label>
+                    </div>
+                    <div class="form-row">
+                        <label>
                         <span>Wheel</span>
                         <select required="required" ng-model="car_wheel" >
                            <option value="">----Select------</option>
                            <option ng-repeat="x in wheel" value="{{x}}">{{x}}</option>
                         </select>
                      </label>
-                  </div>
-                  <div class="form-row">
-                     <label>
+                    </div>
+                    <div class="form-row">
+                        <label>
                         <span>Size</span>
                         <select required="required" ng-model="car_size" >
                            <option value="">----Select------</option>
                            <option ng-repeat="x in size" value="{{x}}">{{x}}</option>
                         </select>
                      </label>
-                  </div>
-                  <div class="form-row">
-                     <label>
+                    </div>
+                    <div class="form-row">
+                        <label>
                         <span>State</span>
                         <select required="required" ng-model="car_state" >
                            <option value="">----Select------</option>
                            <option ng-repeat="x in state" value="{{x}}">{{x}}</option>
                         </select>
                      </label>
-                  </div>
-                  <div class="form-row">
-                     <label>
+                    </div>
+                    <div class="form-row">
+                        <label>
                         <span>SubModel</span>
                         <select required="required" ng-model="car_submodel" >
                            <option value="">----Select------</option>
                            <option ng-repeat="x in submodel" value="{{x}}">{{x}}</option>
                         </select>
                      </label>
-                  </div>
-							<div class="form-row">
-	                   <label>
+                    </div>
+                    <div class="form-row">
+                        <label>
 	                      <span>Color</span>
 	                      <select required="required" ng-model="car_color">
 	                         <option value="">----Select------</option>
 	                         <option ng-repeat="i in color" value="{{i}}">{{i}}</option>
 	                      </select>
 	                   </label>
-	 							</div>
-               <div class="form-row">
-								 	<label>
+                    </div>
+                    <div class="form-row">
+                        <label>
                   <button type="submit">Submit</button>
 								</label>
-               </div>
-            </form>
-         </div>
-      </div>
-      <div class="col-sm-3">
-         <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-      </div>
-   </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="col-sm-3">
+            <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+        </div>
+    </div>
 </div>
